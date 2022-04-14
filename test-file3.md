@@ -1,7 +1,7 @@
+[link1](https://randomlink.com)
 # Test3 
 (I wonder what will happen)
 
-![alt-text](somerandompicture.jpg)
+![alt](randompic.jpg)
 
-[link1](https://randomlink.com)
 [link2](randomlink.html)
