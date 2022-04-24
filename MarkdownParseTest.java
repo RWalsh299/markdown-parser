@@ -28,8 +28,8 @@ public void file1() throws IOException{
     @Test
     public void file2() throws IOException{
         ArrayList<String> testArr = new ArrayList<>();
-        testArr.add("https://something.com");
-        testArr.add("some-thing.html");
+        testArr.add("https://somethingfunny.com");
+        testArr.add("somethingfunny.html");
     
         Path fileName = Path.of("test-file2.md");
         String content = Files.readString(fileName);
@@ -41,8 +41,7 @@ public void file1() throws IOException{
         @Test
         public void file3() throws IOException{
             ArrayList<String> testArr = new ArrayList<>();
-            testArr.add("https://something.com");
-            testArr.add("some-thing.html");
+            testArr.add("https://randomlink.com");
         
             Path fileName = Path.of("test-file3.md");
             String content = Files.readString(fileName);
@@ -54,9 +53,8 @@ public void file1() throws IOException{
             @Test
             public void file4() throws IOException{
                 ArrayList<String> testArr = new ArrayList<>();
-                testArr.add("https://something.com");
-                testArr.add("some-thing.html");
-            
+                testArr.add("testtest.html");
+                
                 Path fileName = Path.of("test-file4.md");
                 String content = Files.readString(fileName);
                 ArrayList<String> links = getLinks(content);
