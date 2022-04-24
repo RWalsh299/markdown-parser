@@ -19,10 +19,10 @@ public class MarkdownParse {
             if(closeBracket == -1){closeBracket = openBracket + 1;}
 
             int openParen = markdown.indexOf("(", closeBracket);
-            if (openParen == -1){openParen = closeBracket;}
+            if (openParen == -1){openParen = closeBracket+1;}
 
             int closeParen = markdown.indexOf(")", openParen);
-            if (closeParen == -1){closeParen = markdown.length();}
+            if (closeParen == -1){closeParen = markdown.indexOf(".", openParen) + 3;}
 
 
             if (markdown.indexOf("!", 0)+1 == openBracket){
@@ -30,13 +30,10 @@ public class MarkdownParse {
             }else{
                 toReturn.add(markdown.substring(openParen + 1, closeParen));
             }
-            currentIndex = closeParen + 1;
-            
+            currentIndex = closeParen + 1;   
         }
-
         return toReturn;
     }
-
 
     public static void main(String[] args) throws IOException {
         Path fileName = Path.of(args[0]);
