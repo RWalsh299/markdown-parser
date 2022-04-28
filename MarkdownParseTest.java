@@ -60,6 +60,18 @@ public void file1() throws IOException{
                 
                 assertEquals(testArr,links);
                 }
+
+            @Test
+            public void file5() throws IOException{
+                ArrayList<String> testArr = new ArrayList<>();
+                testArr.add("https://randomlink.com");
+
+                Path fileName = Path.of("mytest-file5.md");
+                String content = Files.readString(fileName);
+                ArrayList<String> links = getLinks(content);
+
+                assertEquals(testArr, links);
+            }
     
 }
 
