@@ -31,7 +31,7 @@ public class MarkdownParse {
                 if (closeParen == -1){closeParen = markdown.indexOf(".", openParen) + 3;}
             }else {break;}
 
-            if (markdown.indexOf("!", 0)+1 == openBracket || openParen-1 != closeBracket){
+            if (markdown.indexOf("!", 0)+1 == openBracket){
                 break; 
             }else{
                 toReturn.add(markdown.substring(openParen + 1, closeParen));
