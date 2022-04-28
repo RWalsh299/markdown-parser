@@ -52,7 +52,7 @@ public void file1() throws IOException{
             @Test
             public void file4() throws IOException{
                 ArrayList<String> testArr = new ArrayList<>();
-                testArr.add("esttest.html");
+                testArr.add("esttest.ht");
                 
                 Path fileName = Path.of("mytest-file4.md");
                 String content = Files.readString(fileName);
